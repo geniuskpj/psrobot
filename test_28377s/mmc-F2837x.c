@@ -281,7 +281,7 @@ void power_on (void)	//EDITED
 	SpicRegs.SPICTL.bit.CLK_PHASE = 0;
 	SpicRegs.SPICCR.bit.CLKPOLARITY = 1;
 	SpicRegs.SPICTL.bit.MASTER_SLAVE = 1;		//Master mode
-	SpicRegs.SPIBRR.all = 63;						//update value to proper setting for correct bitrate ( current: ~500kHz)
+	SpicRegs.SPIBRR.all = 99;						//update value to proper setting for correct bitrate ( current: ~500kHz)
 	SpicRegs.SPICCR.bit.SPICHAR = 0x7;			//Set char length to 8 bits
 	SpicRegs.SPICTL.bit.TALK = 1;
 	SpicRegs.SPICCR.bit.SPISWRESET = 1;			//Release SPI from reset
